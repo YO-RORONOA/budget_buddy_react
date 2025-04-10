@@ -17,3 +17,11 @@ const register = async (name, email, password, password_confirmation) => {
     password_confirmation,
   });
 };
+
+const logout = () => {
+  api.post('/logout').then(() => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+  });
+};
+
