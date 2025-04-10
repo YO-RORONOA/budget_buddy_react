@@ -9,3 +9,11 @@ const login = async (email, password) => {
   return response.data;
 };
 
+const register = async (name, email, password, password_confirmation) => {
+  return api.post('/register', {
+    name,
+    email,
+    password,
+    password_confirmation,
+  });
+};
