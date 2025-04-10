@@ -25,3 +25,15 @@ const logout = () => {
   });
 };
 
+const getCurrentUser = () => {
+  return JSON.parse(localStorage.getItem('user'));
+};
+
+const AuthService = {
+  login,
+  register,
+  logout,
+  getCurrentUser,
+};
+
+export default AuthService;
